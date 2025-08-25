@@ -1,1 +1,3 @@
-var d = new Date();
+function addToCalucator(value){
+    document.getElementById("displayResuly").value+=value;
+}
