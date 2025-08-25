@@ -1,101 +1,105 @@
-    body {
-      background: #555454;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-    }
+/* ریست اولیه */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    .container {
-      background: #2e2d2d;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
-      text-align: center;
-      width: 300px;
-    }
+/* استایل پس‌زمینه کلی */
+body {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-    h2 {
-      color: #fff;
-      margin-bottom: 15px;
-    }
+/* کانتینر اصلی */
+.container {
+  background: #222;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
+  width: 320px;
+}
 
-    .display input {
-      width: 100%;
-      height: 50px;
-      font-size: 1.5em;
-      text-align: right;
-      border: none;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      padding: 10px;
-      background: #eee;
-      color: #333;
-    }
+/* فرم ماشین حساب */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
+/* نمایشگر */
+.display input {
+  width: 100%;
+  height: 60px;
+  border: none;
+  outline: none;
+  text-align: right;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background: #000;
+  color: #0f0;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.7);
+}
 
-    input[type="button"] {
-      width: 65px;
-      height: 50px;
-      font-size: 1.2em;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 0.2s;
-    }
+/* ردیف دکمه‌ها */
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 5px 0;
+}
 
-    input[type="button"]:hover {
-      opacity: 0.8;
-    }
+/* دکمه‌ها */
+input[type="button"] {
+  width: 60px;
+  height: 50px;
+  margin: 5px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #444;
+  color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
 
-    .red {
-      background: #e74c3c;
-      color: white;
-      margin-bottom: 15px;
-      width: 100%;
-    }
+/* افکت هاور */
+input[type="button"]:hover {
+  background: #666;
+  transform: scale(1.05);
+}
 
-    .row input[value="+"] {
-      background: #3498db;
-      color: white;
-    }
-    .row input[value="-"] {
-      background: #9b59b6;
-      color: white;
-    }
-    .row input[value="*"],
-    .row input[value="x"] {
-      background: #f39c12;
-      color: white;
-    }
-    .row input[value="/"] {
-      background: #16a085;
-      color: white;
-    }
-    .row input[value="="] {
-      background: #2ecc71;
-      color: white;
-    }
+/* دکمه مساوی */
+input[name="green"] {
+  background: #27ae60;
+  color: white;
+}
+input[name="green"]:hover {
+  background: #2ecc71;
+}
 
-    .row input[value="0"],
-    .row input[value="1"],
-    .row input[value="2"],
-    .row input[value="3"],
-    .row input[value="4"],
-    .row input[value="5"],
-    .row input[value="6"],
-    .row input[value="7"],
-    .row input[value="8"],
-    .row input[value="9"],
-    .row input[value="."] {
-      background: #ecf0f1;
-      color: #333;
-    }
+/* دکمه پاک کردن */
+input.red {
+  background: #c0392b;
+  color: white;
+}
+input.red:hover {
+  background: #e74c3c;
+}
 
-  
+/* تیتر */
+h2 {
+  color: #ecf0f1;
+  margin: 10px 0;
+  font-size: 20px;
+  text-align: center;
+}
